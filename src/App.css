@@ -17,10 +17,6 @@ body {
 /* Ефекти при наведенні на кнопку */
 
 /* Ефекти при натисканні кнопки */
-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
 
 /* Стилі для переходів між текстами */
 .fade-in {
@@ -37,9 +33,6 @@ button:active {
 }
 
 /* Анімація для кнопок, які з'являються */
-.button-appear {
-  animation: buttonAppear 0.5s ease-out;
-}
 
 @keyframes buttonAppear {
   0% {
@@ -75,4 +68,24 @@ button:active {
   font-weight: bold;
   color: #ff4040;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.muteButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000; /* Ensure the button is always on top */
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .muteButton {
+    font-size: 20px;
+    top: 0;
+    right: 0;
+  }
 }

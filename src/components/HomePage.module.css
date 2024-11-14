@@ -1,6 +1,30 @@
 /* HomePage.css */
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Rubik+Bubbles&display=swap");
+.homePage {
+  padding: 20px;
+  text-align: center;
+}
 
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.textInfo {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.startButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 .homePage {
   display: flex;
   flex-direction: column;

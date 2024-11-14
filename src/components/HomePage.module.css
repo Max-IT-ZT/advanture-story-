@@ -1,0 +1,147 @@
+/* HomePage.css */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Rubik+Bubbles&display=swap");
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background-image: url("../../public/home.JPG"); /* Поставте шлях до зображення з хатинкою в лісі */
+  background-size: cover;
+  background-position: center;
+  color: #f4f4f4;
+  position: relative;
+  text-shadow: 1px 1px 4px #000;
+  overflow: hidden; /* Запобігає виходу елементів за межі */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.muteButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.muteButton:hover {
+  transform: scale(1.2);
+}
+
+.title {
+  text-align: center;
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.693);
+
+  animation: titleAnimation 2s ease-out;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.textInfo {
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  width: 320px;
+  font-size: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0.5rem 0;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 1s forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text {
+  width: 320px;
+  text-align: center;
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.startButton {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  padding: 15px 25px;
+  border: 2px solid rgb(200, 0, 0); /* червоний, що асоціюється з небезпекою */
+  background-color: rgba(50, 50, 50, 0.7); /* темний, затемнений фон */
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6),
+    -2px -2px 5px rgba(255, 0, 0, 0.5); /* ефект тіні */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: rgba(200, 0, 0, 0.8); /* яскравіший червоний */
+  border-color: rgba(255, 0, 0, 0.9); /* яскравіша межа */
+  color: #fff;
+  transform: scale(1.1) rotate(3deg); /* легкий ефект обертання, щоб створити ефект тривоги */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.7); /* червона світлова тінь */
+  animation: shake 0.5s ease-in-out infinite alternate; /* анімація тремтіння */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.startButton:active {
+  transform: scale(1.05) rotate(0deg); /* при натисканні кнопка трохи стискається */
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
